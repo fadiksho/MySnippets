@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Fluxor Store</Title>
+			<Author>Fadi</Author>
+			<Shortcut>fluxorstore</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[public record $FeatureName$State
+{
+	$end$
+}
+
+public class $FeatureName$Feature : Feature <$FeatureName$State>
+{
+	public override string GetName() => "$FeatureName$";
+
+	protected override $FeatureName$State GetInitialState()
+	{
+		return new $FeatureName$State
+		{
+			
+		};
+	}
+}
+
+public static class $FeatureName$Reducers
+{
+	
+}
+
+public class $FeatureName$Effects
+{
+	private readonly IState<$FeatureName$State> _state;
+
+	public $FeatureName$Effects(IState<$FeatureName$State> state)
+	{
+		_state = state;
+	}
+}
+]]>
+			</Code>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>FeatureName</ID>
+					<Default>
+						FeatureName
+					</Default>
+					<ToolTip>
+						Awesome feature.
+					</ToolTip>
+				</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
